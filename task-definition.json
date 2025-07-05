@@ -2,8 +2,8 @@
   "taskDefinitionArn": "arn:aws:ecs:us-east-2:545009838725:task-definition/carl8210-task-definition:1",
   "containerDefinitions": [
     {
-      "name": "web",
-      "image": "amazon/amazon-ecs-sample:latest",
+      "name": "azaf8210-container",
+      "image": "545009838725.dkr.ecr.us-east-2.amazonaws.com/carl8210:latest",
       "cpu": 1024,
       "memory": 3072,
       "memoryReservation": 1024,
@@ -81,7 +81,6 @@
     "cpuArchitecture": "X86_64",
     "operatingSystemFamily": "LINUX"
   },
-  "registeredAt": "2025-07-05T10:58:33.857Z",
   "enableFaultInjection": false,
   "tags": []
 }
