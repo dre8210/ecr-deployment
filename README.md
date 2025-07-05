@@ -65,12 +65,12 @@ No build process or server is required as this is a static website.
 
 ## Deployment
 
-The site can be deployed to any static web hosting service such as:
+This application is deployed using AWS ECS (Elastic Container Service) with automated CI/CD:
 
-- GitHub Pages
-- Netlify
-- Vercel
-- AWS S3
+- **Container Registry**: AWS ECR (Elastic Container Registry)
+- **Orchestration**: AWS ECS with Fargate
+- **CI/CD**: GitHub Actions workflow
+- **Deployment**: Automated on push to main branch
 
 ## Future Enhancements
 
