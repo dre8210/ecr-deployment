@@ -26,8 +26,8 @@ jobs:
       - name: Build, tag, and push Docker image to ECR
         id: build-image
         run: |
-          docker build -t my-app .
-          docker tag my-app ${{ secrets.ECR_REPOSITORY_URI }}:latest
+          docker build -t my-app:latest .
+          docker tag my-app:latest ${{ secrets.ECR_REPOSITORY_URI }}:latest
           docker push ${{ secrets.ECR_REPOSITORY_URI }}:latest
 
       - name: Fill in the new image in the ECS task definition
