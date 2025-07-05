@@ -39,9 +39,7 @@
   "taskRoleArn": "arn:aws:iam::545009838725:role/ecsTaskExecutionRole",
   "executionRoleArn": "arn:aws:iam::545009838725:role/ecsTaskExecutionRole",
   "networkMode": "awsvpc",
-  "revision": 1,
   "volumes": [],
-  "status": "ACTIVE",
   "requiresAttributes": [
     {
       "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
@@ -84,7 +82,6 @@
     "operatingSystemFamily": "LINUX"
   },
   "registeredAt": "2025-07-05T15:05:32.557Z",
-  "registeredBy": "arn:aws:iam::545009838725:user/carl.azaf",
   "enableFaultInjection": false,
   "tags": []
 }
