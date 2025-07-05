@@ -27,8 +27,8 @@ jobs:
         id: build-image
         run: |
           docker build -t my-app:latest .
-          docker tag my-app:latest ${{ secrets.ECR_REPOSITORY_URI }}:latest
-          docker push ${{ secrets.ECR_REPOSITORY_URI }}:latest
+          docker tag my-app:latest ${{ secrets.ECR_REPOSITORY }}:latest
+          docker push ${{ secrets.ECR_REPOSITORY }}:latest
 
       - name: Fill in the new image in the ECS task definition
         id: task-def
@@ -36,7 +36,7 @@ jobs:
         with:
           task-definition: ${{ secrets.ECS_TASK_DEFINITION }}
           container-name: my-app:latest
-          image: ${{ secrets.ECR_REPOSITORY_URI }}
+          image: ${{ secrets.ECR_REPOSITORY }}
 
       - name: Deploy ECS service
         uses: aws-actions/amazon-ecs-deploy-task-definition@v1
